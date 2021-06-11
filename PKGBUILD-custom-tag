@@ -1,6 +1,8 @@
+# This will fail with 'invalid reference v2.1 for now, though will work fine when `the tag 'v2.1'` is available'
+
 # Maintainer: Arthur Sonzogni <ftxui at gmail dot com>
 pkgname=ftxui-git
-pkgver=r277.4d29dcc
+pkgver=2.1
 pkgrel=1
 pkgdesc="C++ Functional Terminal User Interface"
 arch=('x86_64' 'amd64' 'arm64' 'armhf' 'i386' 'ppc64el' 's390x')
@@ -11,7 +13,7 @@ makedepends=('git')
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 install='.install'
-source=("${pkgname%-git}::git+https://github.com/ArthurSonzogni/FTXUI")
+source=("${pkgname%-git}::git+https://github.com/ArthurSonzogni/FTXUI#tag=v${pkgver}")
 md5sums=('SKIP')
 
 pkgver() {

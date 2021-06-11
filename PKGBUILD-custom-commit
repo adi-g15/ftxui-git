@@ -1,9 +1,10 @@
 # Maintainer: Arthur Sonzogni <ftxui at gmail dot com>
 pkgname=ftxui-git
-pkgver=r277.4d29dcc
+pkgver=1
 pkgrel=1
 pkgdesc="C++ Functional Terminal User Interface"
 arch=('x86_64' 'amd64' 'arm64' 'armhf' 'i386' 'ppc64el' 's390x')
+
 url="https://github.com/ArthurSonzogni/FTXUI"
 license=('MIT')
 depends=('cmake' 'gcc' 'ninja') # ninja is optional, just remove "-G Ninja" from build() too, though its faster if you leave as it is
@@ -11,7 +12,7 @@ makedepends=('git')
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 install='.install'
-source=("${pkgname%-git}::git+https://github.com/ArthurSonzogni/FTXUI")
+source=("${pkgname%-git}::git+https://github.com/ArthurSonzogni/FTXUI#commit=e9eab32b2fe1d720c5c12d1131074e719840ffdc")
 md5sums=('SKIP')
 
 pkgver() {
